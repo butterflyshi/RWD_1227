@@ -1,0 +1,214 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+  background-color: #f0e7d4;
+  color:#000000;
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  background: #7B9098;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.text-spacing {
+  letter-spacing: 2px;
+}
+
+
+article {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+footer {
+  background: #7B9098;
+  text-align: center;
+  height: 80px;
+  margin-top: 150px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.footer-text {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+}
+
+
+/*動畫*/
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+
+/*幻燈片*/
+.slideshow {
+    position: relative;
+    transition: 2s;
+    user-select: none;
+    margin: 0 auto; /* 水平置中 */
+    max-width: 100%;
+    height: 480px;
+    overflow: hidden; /* 隱藏多餘部分 */
+}
+.slide-item {
+    display: none;
+    position: relative;
+    overflow: hidden;
+}
+img {
+    width: 100%;
+    vertical-align: middle;
+    transition: 0.6s;
+    object-fit: cover; /* 保持比例且填滿容器 */
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+.slide-arraw-prev, .slide-arraw-next {
+    padding: 20px;
+    position: absolute;
+    line-height: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+.slide-arraw-prev:hover {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0 5px 5px 0;
+    color: white;
+    cursor: pointer;
+    transition: 0.6 ease;
+}
+.slide-arraw-next:hover {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px 0 0 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.6 ease;
+}
+.arraw-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.arraw-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slide-dot {
+    padding: 20px 5px;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.active,
+.dot:hover {
+    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+.fades {
+    animation: 4s fades;
+}
+@keyframes fades {
+    from {
+      opacity: 0.2;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+
+/* 項目動畫效果 */
+.staggered {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: var(--delay); /* 使用自定義屬性作為動畫延遲 */
+    padding: 10px;
+    margin: 5px;
+    background-color:#f0e7d4;;
+    color:#1c212c;
+    border-radius: 5px;
+}
+
+
+/*RWD*/
+/* 平板樣式 (小於 960px) */
+@media (max-width: 959px) {
+    body {
+      background-color: #f0e7d4;
+    }
+ 
+    header {
+      padding: 20px;
+      font-size: 1.5rem;
+    }
+ 
+    main {
+      max-width: 800px;
+    }
+ 
+    .content {
+      text-align: center;
+    }
+  }
+
+
+/* 手機樣式 (小於 480px) */
+  @media screen and (max-width: 479px) {
+    body {
+      background-color: #f0e7d4;
+      font-size: 12px;
+    }
+ 
+    header {
+      padding: 4px;
+    }
+ 
+    main {
+      max-width: 100%;
+      padding: 10px;
+    }
+ 
+    footer {
+      padding: 15px;
+    }
+  }
+
+
+
+

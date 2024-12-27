@@ -1,0 +1,420 @@
+/*導覽列*/
+.nav {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: sticky;
+    top: 0; /* 當滾動到頂端時固定 */
+    z-index: 99;
+}
+.nav-list{
+    display: flex;
+    width: 100%;
+    background-color:#7B9098;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav-item {
+    flex: 1;
+    text-align: center;
+}
+.nav-link {
+    display: block;
+    color: white;
+    padding: 14px 30px;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color:#7B9098;
+    background-color:#f0e7d4;
+}
+
+
+/*文字*/
+p {
+    color:#1c212c;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+    line-height: 20px;
+}
+h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.7rem;
+    text-align: center;
+}
+h3 {
+    color:#1c212c;
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.rem {
+    color:#1c212c;
+    font-size: 1rem;
+    line-height: 30px;
+}
+.song {
+    color:#1c212c;
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+.box {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+.box-title {
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: 900;
+}
+.box-list {
+    display: flex;
+    justify-content: center;
+}
+.box-item {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: transform 0.3s ease;
+}
+.box-item:hover {
+    transform: scale(1.1);
+}
+
+
+/*article*/
+.about-article {
+    width: 1024px;
+    height: auto;
+    margin: auto;
+    padding: 0;
+}
+
+
+/*登場角色照片*/
+.pics {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+.pics:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.pics img:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1; /*預設為可見*/
+}
+/*第二張圖片，預設隱藏*/
+.pics img:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* 預設為不可見 */
+}
+/*當滑鼠移入時，切換圖片的可見性*/
+.pics:hover img:first-child {
+    opacity: 0; /*隱藏第一張圖片*/
+}
+.pics:hover img:last-child {
+    opacity: 1; /*顯示第二張圖片*/
+}
+
+
+/*登場角色文字*/
+.grid-character {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 20px;
+    width: 1120px;
+    margin: 20px 10px;
+    justify-content: center;
+}
+.flex-character {
+    display: flex;
+    width: 100%;
+    height: 140px;
+    margin: 0;
+}
+.character {
+    display: block;
+    justify-content: center;
+    width: 320px;
+    height: 140px;
+    padding: 10px 20px;
+}
+.char-pic {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* 輕微陰影 */
+}
+.char-name {
+    text-align: left;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1c212c;
+}
+.char-text {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    color: #1c212c;
+}
+.char-text2 {
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1c212c;
+    margin-bottom: 8px;
+}
+
+
+/*配樂Youtube*/
+.movie {
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    max-width: 600px;
+}
+iframe {
+    width: 100%; /* 讓 iframe 撐滿父容器 */
+    height: auto; /* 根據寬度自動調整高度 */
+    aspect-ratio: 16 / 9; /* 維持影片的 16:9 比例 */
+}
+.flex-article {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+
+.effect {
+    position: relative;
+}
+.effect:before,
+.effect:after {
+    content: '';
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    bottom: 15px;
+    z-index: -1;
+    box-shadow: 0 25px 8px #6b6b6b;
+}
+.effect:before{
+    left: 10px;
+    transform: rotate(-3deg);
+}
+.effect:after {
+    right: 10px;
+    left: auto;
+    transform: rotate(3deg);
+}
+
+
+.music {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.music1 {
+    width: 560px;
+    height: auto;
+    margin-left: 30px;
+}
+.music2 {
+    width: 560px;
+    height: auto;
+    margin-right: 30px;
+    float: right;
+}
+.music-article {
+    display: grid;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    color: #1c212c;
+}
+.music-title {
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: 900;
+}
+.music-name{
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+.music-rem {
+    font-size: 1rem;
+    line-height: 30px;
+    margin-bottom: -30px;
+}
+
+
+
+/*RWD*/
+@media (max-width: 959px) {
+    .nav-list {
+        flex-wrap: wrap;
+    }
+    .nav-link {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .about-article {
+        width: 90%; /* 適應較小螢幕的寬度 */
+    }
+    .grid-character {
+        grid-template-columns: 1fr; /* 單欄佈局 */
+        gap: 30px;
+        width: 100%;
+    }
+    .character {
+        width: 100%;
+    }
+    iframe {
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+    .music {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .music1, .music2 {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 479px) {
+    h2 {
+        font-size: 0.9rem;
+    }
+    .nav {
+        flex-direction: column;
+    }
+    .nav-list {
+        align-items: center;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 8px 15px 4px;
+        line-height: 16px;
+    }
+    .rem {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .box {
+        margin-top: 35px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .box-title {
+        font-size: 20px;
+    }
+    .about-article {
+        width: 95%;
+        padding: 0 5px;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .grid-character {
+        width: 100%;
+        gap: 20px;
+        margin: 0%;
+    }
+
+    .flex-character {
+        flex-direction: column; /* 垂直佈局 */
+        justify-items: center;
+    }
+
+    .pics {
+        display: block;
+        margin-bottom: 15px;
+        width: 30px;
+        height: 30px;
+    }
+    .char-pic {
+        width: 30px;
+        height: 30px;
+    }
+
+    .character {
+        text-align: center;
+    }
+    .char-name {
+        font-size: 18px;
+    }
+    .char-text {
+        font-size: 12px;
+    }
+    .char-text2 {
+        font-size: 12px;
+    }
+
+    
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .music {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .music1, .music2 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .music-name {
+        font-size: 1.2rem;
+    }
+
+    .song, .rem {
+        font-size: 0.9rem;
+    }
+    .effect:before,
+    .effect:after {
+        max-width: 200px;
+    }
+
+}
+
+
+
+
+
+

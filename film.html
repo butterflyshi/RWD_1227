@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>影像回顧 | 天臺的幽靈</title>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/yellow.css">
+    <link rel="stylesheet" href="css/film.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+</head>
+
+
+<body>
+    <header>
+        <h2 class="text-spacing">天臺的幽靈</h2>
+    </header>
+
+
+    <!--導覽列-->
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">回到首頁</a>
+            </li>
+            <li class="nav-item">
+                <a href="movie.html" class="nav-link">關於電影</a>
+            </li>
+            <li class="nav-item">
+                <a href="film.html" class="nav-link">影像回顧</a>
+            </li>
+            <li class="nav-item">
+                <a href="staff.html" class="nav-link">製作團隊</a>
+            </li>
+        </ul>
+    </nav>
+
+    <article class="film-article">
+        <!--大劇照
+        <div class="box scroll-reveal">
+            <h3 class="box-title">STILLS</h3>
+            <div class="slideshow">
+                <div class="slide-item fades">
+                    <img src="image/header01.png" alt="Image 1">
+                </div>
+                <div class="slide-item fades">
+                    <img src="image/header02.png" alt="Image 2">
+                </div>
+                <div class="slide-item fades">
+                    <img src="image/header03.png" alt="Image 3">
+                </div>-->
+                
+                <!-- 手動切換的按鈕
+                <a id="prev" class="slide-arraw-prev arraw-prev"> ❮ </a>
+                <a id="next" class="slide-arraw-next arraw-next"> ❯ </a>
+                <div class="slide-dot">
+                    <div class="dot" data-value="1"></div>
+                    <div class="dot" data-value="2"></div>
+                    <div class="dot" data-value="3"></div>
+                </div>
+            </div>
+        </div> -->
+        <img style="max-width: 100%;" src="image/header01.png" alt="Image 1">
+
+        <!--經典劇照-->
+        <div class="gallery scroll-reveal">
+            <h3 class="gallery-title">PHOTO GALLERY</h3>
+            <div class="bg-container">
+                <div class="grid-container">
+                    <img class="container-img" src="image/311753_0.jpg" alt="劇照1">
+                    <img class="container-img" src="image/311750_0.jpg" alt="劇照2">
+                    <img class="container-img" src="image/311751_0.jpg" alt="劇照3">
+                    <img class="container-img" src="image/311752_0.jpg" alt="劇照4">
+                    <img class="container-img" src="image/311749_0.jpg" alt="劇照5">
+                    <img class="container-img" src="image/311755_0.jpg" alt="劇照6">
+                    <img class="container-img" src="image/311756_0.jpg" alt="劇照7">
+                    <img class="container-img" src="image/311757_0.jpg" alt="劇照8">
+                </div>
+            </div>
+        </div>
+
+
+        <!--幕後花絮-->
+        <div class="box scroll-reveal">
+            <h3 class="box-title">Behind the Scenes</h3>
+            <div class="movie effect">
+                <iframe src="https://www.youtube.com/embed/EO6AHWp_0_A?si=wRdvIjrQ5AouMGWJ"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            </div>
+        </div>
+    </article>
+   
+    <!--尾-->
+    <footer class="footer">
+        <p class="footer-text">© Copyrights 2024 前端網站設計課 / Design by En Ling Liu & Ya Die Shi</p>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        // 初始化 ScrollReveal
+        ScrollReveal().reveal('.scroll-reveal', {
+            distance: '50px', // 元素移動的距離
+            origin: 'bottom', // 從底部進入
+            opacity: 0, // 初始透明度
+            duration: 1000, // 動畫持續時間
+            viewFactor: 0.2, // 滾動到可見的比例
+            easing: 'ease-in-out', // 動畫效果
+            reset: true
+        });
+    </script>
+</body>
+</html>
+
+
